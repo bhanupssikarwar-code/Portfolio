@@ -1,0 +1,100 @@
+.about{
+    padding:120px 0;
+    background:#111827;
+}
+
+.section-subtitle{
+    color:whitesmoke;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-title{
+    font-size:45px;
+    font-weight:bold;
+    color:orange;
+}
+
+.about-image{
+    display:flex;
+    justify-content:center;
+}
+
+.about-image img{
+    width:100%;
+    max-width:400px;
+    border-radius:25px;
+    transition:.5s;
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+.about-image img:hover{
+    transform:scale(1.05);
+}
+
+.about-text{
+    color:whitesmoke;
+    line-height:1.9;
+    font-size:18px;
+}
+
+.info-card{
+
+    background:#1e293b;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    margin-bottom:20px;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-10px);
+
+    background:#0f172a;
+
+    box-shadow:0 15px 35px rgba(13,202,240,.2);
+
+}
+
+.about-icon{
+
+    font-size:40px;
+
+    color:honeydew;
+
+    margin-bottom:20px;
+
+}
+
+.info-card h5{
+
+    margin-bottom:10px;
+    color:tomato
+
+}
+
+.info-card p{
+
+    color:#94a3b8;
+
+}
+
+.about .btn{
+
+    transition:.3s;
+
+}
+
+.about .btn:hover{
+
+    transform:translateY(-5px);
+
+}
