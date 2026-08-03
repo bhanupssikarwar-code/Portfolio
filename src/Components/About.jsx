@@ -40,7 +40,7 @@ function About() {
 
             <p className="about-text">
 
-              I'm Bhanu Pratap Singh, a Computer Science graduate with
+              I'm Bhanu Pratap Singh, a Computer Science & Engineering graduate with
               experience in Python, Django, React.js, JavaScript and SQL.
 
               I enjoy solving real-world problems and developing responsive,

@@ -25,7 +25,7 @@ function Hero() {
                         </h3>
 
                         <p className="hero-text">
-                            Computer Science graduate passionate about building
+                            Computer Science & Engineering graduate passionate about building
                             responsive web applications and modern user
                             interfaces using React, Python and SQL.
                         </p>

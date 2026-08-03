@@ -138,3 +138,32 @@
     }
 
 }
+
+@media screen and (max-width:768px){
+    .hero{
+        text-align:center;
+        margin-top:80px;
+    }
+
+    .profile-img{
+        width:250px;
+    }
+
+    .hero-title{
+        font-size:30px;
+        margin-top:10px;
+    }
+
+    .hero-subtitle{
+        font-size:15px;
+    }
+
+    .hero-text{
+        font-size:14px;
+        max-width:100%;
+    }
+    #id{
+        margin-top:20px;
+    }
+   
+}
