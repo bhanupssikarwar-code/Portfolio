@@ -1,78 +1,90 @@
 import "../Css/Skills.css";
-import {
-  FaPython,
-  FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaGitAlt,
-  FaGithub,
-  FaDocker,
-  FaBootstrap,
-  FaAws
-} from "react-icons/fa";
-
-import { SiDjango, SiMysql } from "react-icons/si";
-
-const skills = [
-  { icon: <FaPython />, name: "Python", percent: 90 },
-  { icon: <SiDjango />, name: "Django", percent: 80 },
-  { icon: <FaReact />, name: "React.js", percent: 90 },
-  { icon: <FaJs />, name: "JavaScript", percent: 90 },
-  { icon: <FaHtml5 />, name: "HTML5", percent: 95 },
-  { icon: <FaCss3Alt />, name: "CSS3", percent: 90 },
-  { icon: <FaBootstrap />, name: "Bootstrap", percent: 90 },
-  { icon: <SiMysql />, name: "SQL", percent: 90 },
-  { icon: <FaGitAlt />, name: "Git", percent: 80 },
-  { icon: <FaGithub />, name: "GitHub", percent: 85 },
-  { icon: <FaAws />, name: "Aws", percent: 85 }
-];
 
 function Skills() {
+  const skills = [
+    { name: "React.js", short: "REACT", color: "purple" },
+    { name: "JavaScript", short: "JS", color: "yellow" },
+    { name: "Python", short: "PY", color: "blue" },
+    { name: "Django", short: "DJ", color: "green" },
+    { name: "REST APIs", short: "API", color: "orange" },
+    { name: "SQL", short: "SQL", color: "pink" },
+    { name: "AWS", short: "AWS", color: "cyan" },
+    { name: "Git & GitHub", short: "GIT", color: "red" },
+  ];
+
   return (
-    <section id="skills" className="skills ">
+    <section id="skills" className="skills-section">
 
-      <div className="container">
+      <div className="skills-container">
+        <div className="skills-intro">
 
-        <div className="text-center mb-5">
-          <h5 className="section-subtitle text-success">Technical Skills</h5>
-          <h2 className="section-title ">My Skills</h2>
+          <span className="skills-eyebrow">
+            MY TOOLKIT
+          </span>
+
+          <h2>
+            I speak
+            <br />
+            <span>code</span>
+          </h2>
+
+          <p>
+            The technologies and tools I use to transform ideas
+            into functional, scalable and engaging applications.
+          </p>
+
+          <div className="skills-counter">
+            <strong>08</strong>
+            <span>CORE<br />TECHNOLOGIES</span>
+          </div>
+
+          <div className="skills-caption">
+            Always exploring something new
+          </div>
+
         </div>
+        <div className="skills-showcase">
+          <div className="skills-orbit">
 
-        <div className="row">
-
-          {skills.map((skill, index) => (
-
-            <div className="col-lg-4 col-md-6 mb-4" key={index}>
-
-              <div className="skill-card">
-
-                <div className="skill-header">
-
-                  <div className="skill-icon">
-                    {skill.icon}
-                  </div>
-
-                  <h5>{skill.name}</h5>
-
+            {skills.map((skill, index) => (
+              <div
+                key={skill.name}
+                className={`tech-item ${skill.color} tech-${index + 1}`}
+              >
+                <div className="tech-symbol">
+                  {skill.short}
                 </div>
 
-                <div className="progress">
-
-                  <div
-                    className="progress-bar bg-success progress-animation"
-                    style={{ width: `${skill.percent}%` }}
-                  >
-                    {skill.percent}%
-                  </div>
-
+                <div className="tech-name">
+                  {skill.name}
                 </div>
-
               </div>
+            ))}
 
+            <div className="orbit-center">
+              <span>&lt;/&gt;</span>
+              <small>FULL<br />STACK</small>
             </div>
 
-          ))}
+          </div>
+
+        </div>
+
+      </div>
+      <div className="skills-tools">
+
+        <div className="tool-title">
+          <span>ALSO WORKING WITH</span>
+        </div>
+
+        <div className="tool-list">
+
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>Bootstrap</span>
+          <span>Vite</span>
+          <span>Docker</span>
+          <span>VS Code</span>
 
         </div>
 

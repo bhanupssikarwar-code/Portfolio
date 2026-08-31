@@ -1,71 +1,261 @@
-.custom-navbar {
-  background: rgba(15, 23, 42, 0.9);
-  backdrop-filter: blur(12px);
-  padding: 12px 0;
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  width: 100%;
+
+  padding: 16px 0;
+
+  background: rgba(7, 9, 13, 0.82);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(14px);
 }
 
-.logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: white !important;
+.navbar-container {
+  width: min(1150px, 92%);
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  color:honeydew;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.08em;
+
   text-decoration: none;
 }
+.nav-links {
+  display: flex;
 
-.nav-link {
-  color: white !important;
-  margin-left: 20px;
-  transition: 0.3s;
+  align-items: center;
+
+  gap: 28px;
 }
 
-.nav-link:hover {
-  color: darkorange !important;
+.nav-links a {
+  position: relative;
+
+  color: #737b89;
+
+  font-size:12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 5px;
+
+  background: #a78bfa;
+
+  transform: translateX(-50%);
+
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #f1f5f9;
+}
+
+.nav-links a:hover::after {
+  width: 14px;
+}
+.navbar-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.nav-social {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #252a34;
+
+  border-radius: 8px;
+
+  color: #7d8592;
+
+  font-size: 12px;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
+}
+
+.nav-social:hover {
+  color:honeydew;
+
+  border-color:orange;
+
+  background: #15121e;
+
   transform: translateY(-2px);
 }
 
-.social-icon {
-  color: white;
-  font-size: 22px;
-  transition: 0.3s;
+.nav-hire {
+  margin-left: 6px;
+
+  padding: 8px 13px;
+
+  border: 1px solid #383044;
+
+  border-radius: 8px;
+
+  background: #16121e;
+
+  color:honeydew;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.25s ease;
 }
 
-.social-icon:hover {
-  color: darkorange;
+.nav-hire:hover {
+  background: #211a2e;
+
+  border-color:orange;
 }
 
-.navbar-toggler {
-  border: none;
+.menu-button {
+  display: none;
+
+  width: 35px;
+  height: 35px;
+
+  padding: 0;
+
+  border: 1px solid #292e38;
+
+  border-radius: 8px;
+
+  background: #11141a;
+
+  cursor: pointer;
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
+.menu-button span {
+  display: block;
+
+  width: 14px;
+  height: 1px;
+
+  margin: 4px auto;
+
+  background: #a78bfa;
+
+  transition: 0.25s ease;
 }
 
-/* White hamburger icon */
-.navbar-toggler-icon {
-  filter: invert(1);
+.menu-button.open span:first-child {
+  transform: translateY(2.5px) rotate(45deg);
 }
 
-/* Mobile View */
-@media (max-width: 991px) {
-  .navbar-collapse {
-    background: rgba(15, 23, 42, 0.98);
-    margin-top: 12px;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
+.menu-button.open span:last-child {
+  transform: translateY(-2.5px) rotate(-45deg);
+}
+
+@media (max-width: 850px) {
+
+  .nav-links {
+    position: absolute;
+
+    top: 67px;
+    left: 4%;
+
+    width: 92%;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0;
+
+    padding: 10px;
+
+    border: 1px solid #252a34;
+
+    border-radius: 12px;
+
+    background: #0c0f14;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
   }
 
-  .nav-link {
-    margin: 10px 0;
+  .nav-links.active {
+    display: flex;
   }
 
-  .social-icon {
-    margin: 12px 8px;
-    font-size: 24px;
+  .nav-links a {
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
   }
 
-  .logo {
-    font-size: 26px;
+  .nav-links a:hover {
+    background: #151820;
   }
-  
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
 }
+

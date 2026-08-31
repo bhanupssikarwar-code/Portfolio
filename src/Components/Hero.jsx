@@ -1,108 +1,124 @@
-import { FaGithub, FaLinkedin, FaDownload, FaArrowRight } from "react-icons/fa";
 import "../Css/Hero.css";
 import Bhanuimage from "../assets/images/Bhanuimage.jpg";
+
 function Hero() {
-    return (
-        <section id="home" className="hero d-flex align-items-center">
+  return (
+    <section id="home" className="hero">
+      <div className="hero-glow hero-glow-purple"></div>
+      <div className="hero-glow hero-glow-cyan"></div>
 
+      <div className="container hero-container">
+        <div className="hero-content">
 
-            <div className="container">
+          <div className="hero-badge">
+            Available for opportunities
+          </div>
 
-                <div className="row align-items-center">
+          <p className="hero-intro">
+            Hi, I'm
+          </p>
 
-                    {/* Left Side */}
+          <h1>
+            Bhanu Pratap
+            <br />
+            <span className="gradient-text">
+              Singh Sikarwar
+            </span>
+          </h1>
 
-                    <div className="col-lg-7">
+          <h2>
+            Full Stack Developer
+          </h2>
 
-                        <p className="hello">👋 Hello, I'm</p>
+          <p className="hero-description">
+            I build modern, responsive and scalable digital solutions
+            using <strong>React, Django, REST APIs, Python and SQL</strong>.
+            I also work with AWS to build and deploy cloud-based solutions.
+          </p>
 
-                        <h1 className="hero-title">
-                            Bhanu Pratap Singh <span>Sikarwar</span>
-                        </h1>
+          <div className="hero-buttons">
 
-                        <h3 className="typing">
-                            Python & React Developer
-                        </h3>
+            <a
+              href="#projects"
+              className="btn btn-primary"
+            >
+              View My Work
+            </a>
 
-                        <p className="hero-text">
-                            Computer Science & Engineering graduate passionate about building
-                            responsive web applications and modern user
-                            interfaces using React, Python and SQL.
-                        </p>
+            <a
+              href="/Bhanu_Pratap_Singh_Sikarwar_resume.pdf"
+              className="btn btn-outline"
+            >
+              Download Resume
+            </a>
 
-                        <div className="mt-4">
+          </div>
+          <div className="hero-stack">
+            <div className="stack-list">
+              <span>React</span>
+              <span>Python</span>
+              <span>Django</span>
+              <span>REST API</span>
+              <span>SQL</span>
+              <span>AWS</span>
+            </div>
 
-                            <a
-                                href="/Bhanu_Pratap_Singh_Sikarwar_resume.pdf"
-                                download
-                                className="btn btn-dark btn-lg me-3"
-                            >
-                                <FaDownload className="me-2" />
-                                Download Resume
-                            </a>
+          </div>
 
-                            <a
-                                href="/Bhanu_Pratap_Singh_Sikarwar_resume.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn btn-secondary btn-lg"
-                            >
-                                View Resume
-                            </a>
-                            <div className="row mt-5 g-4 stats">
+        </div>
+        <div className="hero-visual">
 
-                                <div className="col-md-4">
-                                    <div className="stat-card">
-                                        <h2>3+</h2>
-                                        <p>Projects</p>
-                                    </div>
-                                </div>
+          <div className="hero-image-wrapper">
 
-                                <div className="col-md-4">
-                                    <div className="stat-card">
-                                        <h2>2025</h2>
-                                        <p>Graduate</p>
-                                    </div>
-                                </div>
+            <div className="image-glow"></div>
 
-                                <div className="col-md-4">
-                                    <div className="stat-card">
-                                        <h2>1</h2>
-                                        <p>Internship</p>
-                                    </div>
-                                </div>
+            <div className="image-border">
 
-                            </div>
+              <div className="hero-image-card">
 
-                        </div>
-                    </div>
+                <img
+                  src={Bhanuimage}
+                  alt="Bhanu Pratap Singh Sikarwar"
+                />
 
-                    {/* Right Side */}
-
-                    <div className="col-lg-5 text-center">
-
-                        <div className="profile-box">
-
-                            <img
-                                src={Bhanuimage}
-                                alt="profile"
-                                className="profile-img"
-                            />
-
-                        </div>
-
-                    </div>
-
-                </div>
+              </div>
 
             </div>
 
+          </div>
 
+          <div className="floating-card floating-card-one">
+            <span className="floating-icon">{"</>"}</span>
 
-        </section>
+            <div>
+              <strong>Frontend</strong>
+              <small>React.js</small>
+            </div>
+          </div>
 
+          <div className="floating-card floating-card-two">
+            <span className="floating-icon">⚡</span>
 
-    );
+            <div>
+              <strong>Backend</strong>
+              <small>Django + REST</small>
+            </div>
+          </div>
+
+          <div className="floating-card floating-card-three">
+            <span className="floating-icon">☁</span>
+
+            <div>
+              <strong>Cloud</strong>
+              <small>AWS</small>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
 }
 
 export default Hero;

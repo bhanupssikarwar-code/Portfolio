@@ -1,7 +1,7 @@
 import About from './Components/About';
+import "./App.css";
 import Contact from './Components/Contact';
 import Experience from './Components/Experience';
-import Footer from './Components/Footer';
 import Hero from './Components/Hero';
 import Navbar from './Components/Navbar'
 import Projects from './Components/Projects';
@@ -16,10 +16,6 @@ function App() {
       <Projects/>
       <Experience/>
       <Contact/>
-      <Footer/>
-     
-
-
     </>
   );
 }
