@@ -1,343 +1,508 @@
 
 .experience-section {
-  padding: 120px 0;
-
-  background: #0b0d12;
-
-  color: #f8fafc;
+    width: 100%;
+    padding: 130px 24px 140px;
+    background: #ffffff;
+    color: #171717;
 }
 
 .experience-container {
-  width: min(1100px, 90%);
-
-  margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-
 .experience-header {
-  margin-bottom: 80px;
+    max-width: 700px;
+    margin-bottom: 85px;
 }
 
 .experience-header > span {
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 0.15em;
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 12px;
+    border-radius: 50px;
+    background: #f3f3f1;
+    color: #777777;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 .experience-header h2 {
-  margin-top: 18px;
-
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: clamp(3rem, 5vw, 5rem);
-
-  line-height: 0.95;
-
-  letter-spacing: -0.06em;
+    margin: 0;
+    font-size: 48px;
+    line-height: 1.08;
+    letter-spacing: -2px;
+    font-weight: 750;
+    color: #171717;
 }
 
 .experience-header h2 strong {
-  background:
-    linear-gradient(
-      90deg,
-      #a78bfa,
-      #60a5fa,
-      #22d3ee
-    );
-
-  -webkit-background-clip: text;
-
-  -webkit-text-fill-color: transparent;
+    font-weight: 750;
+    color: #555555;
 }
-
 
 .journey-row {
-  display: grid;
+    position: relative;
 
-  grid-template-columns:
-    60px 1fr 120px;
+    display: grid;
+    grid-template-columns: 70px 1fr 100px;
 
-  gap: 35px;
+    gap: 35px;
 
-  padding: 40px 0;
+    padding-bottom: 65px;
+    margin-bottom: 65px;
 
-  border-top: 1px solid #272b35;
-}
-
-.journey-row:last-of-type {
-  border-bottom: 1px solid #272b35;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 .journey-number {
-  color: #4b5563;
+    position: relative;
 
-  font-family: "Space Grotesk", sans-serif;
+    width: 44px;
+    height: 44px;
 
-  font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  font-weight: 700;
+    border-radius: 50%;
+
+    background: #f3f3f1;
+    color: #555555;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.blue-number {
+    background: #f3f3f1;
+    color: #555555;
+}
+
+.journey-row.first .journey-number::after {
+    content: "";
+
+    position: absolute;
+
+    top: 44px;
+    left: 50%;
+
+    width: 1px;
+    height: 190px;
+
+    background: #dedede;
+
+    transform: translateX(-50%);
 }
 
 .journey-content {
-  max-width: 650px;
+    padding-top: 2px;
 }
 
 .journey-type {
-  color: #a78bfa;
+    display: inline-block;
 
-  font-size: 9px;
+    margin-bottom: 13px;
 
-  font-weight: 800;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
 
-  letter-spacing: 0.15em;
+    color: #777777;
 }
 
 .journey-type.blue {
-  color: #60a5fa;
+    color: #777777;
 }
 
 .journey-content h3 {
-  margin: 12px 0 7px;
+    margin: 0 0 10px;
 
-  font-family: "Space Grotesk", sans-serif;
+    max-width: 650px;
 
-  font-size: 25px;
+    font-size: 28px;
+    line-height: 1.25;
 
-  letter-spacing: -0.03em;
+    letter-spacing: -0.7px;
+
+    font-weight: 750;
+
+    color: #181818;
 }
 
 .journey-date {
-  margin-bottom: 15px;
+    margin: 0 0 18px;
 
-  color: #6b7280;
+    font-size: 12px;
+    font-weight: 700;
 
-  font-size: 10px;
+    color: #999999;
 
-  text-transform: uppercase;
-
-  letter-spacing: 0.1em;
+    letter-spacing: 0.5px;
 }
 
 .journey-content > p:last-child {
-  color: #9ca3af;
+    max-width: 620px;
 
-  font-size: 12px;
+    margin: 0;
 
-  line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: #707070;
 }
 
-
 .journey-side {
-  display: flex;
+    padding-top: 5px;
 
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-  align-items: flex-end;
-
-  gap: 8px;
+    gap: 7px;
 }
 
 .journey-side span {
-  color: #4b5563;
+    font-size: 8px;
+    font-weight: 800;
 
-  font-size: 8px;
+    letter-spacing: 1.7px;
 
-  font-weight: 800;
-
-  letter-spacing: 0.15em;
+    color: #b1b1b1;
 }
 
 .journey-side b {
-  color: #e5e7eb;
+    font-size: 24px;
+    font-weight: 750;
 
-  font-family: "Space Grotesk", sans-serif;
-
-  font-size: 20px;
+    color: #dedede;
 }
 
-
 .cert-section {
-  padding-top: 100px;
+    margin-top: 100px;
 }
 
 .cert-heading {
-  display: flex;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 
-  align-items: end;
+    gap: 30px;
 
-  justify-content: space-between;
-
-  margin-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 .cert-heading > span {
-  color: #22d3ee;
+    font-size: 10px;
+    font-weight: 800;
 
-  font-size: 9px;
+    letter-spacing: 2px;
 
-  font-weight: 800;
-
-  letter-spacing: 0.15em;
+    color: #999999;
 }
 
 .cert-heading h3 {
-  font-family: "Space Grotesk", sans-serif;
+    margin: 0;
 
-  font-size: 30px;
+    font-size: 30px;
+    line-height: 1;
 
-  letter-spacing: -0.04em;
+    letter-spacing: -1px;
+
+    font-weight: 750;
+
+    color: #181818;
 }
 
 .cert-heading h3 strong {
-  color: #22d3ee;
+    color: #555555;
 }
 
 .cert-grid {
-  display: grid;
+    display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-  gap: 15px;
+    gap: 16px;
 }
 
 .cert-item {
-  padding: 30px;
+    position: relative;
 
-  background: #11141b;
+    min-height: 220px;
 
-  border: 1px solid #272b35;
+    padding: 25px;
 
-  border-radius: 18px;
+    border: 1px solid #e7e7e7;
 
-  transition:
-    transform 0.3s ease,
-    border-color 0.3s ease;
+    border-radius: 18px;
+
+    background: #fafafa;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.cert-item::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -75px;
+    top: -75px;
+
+    border-radius: 50%;
+
+    border: 1px solid #e5e5e3;
+
+    pointer-events: none;
+}
+
+.cert-item::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    right: -45px;
+    top: -45px;
+
+    border-radius: 50%;
+
+    border: 1px solid #ececea;
+
+    pointer-events: none;
 }
 
 .cert-item:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 
-  border-color: #4b5563;
+    border-color: #d8d8d5;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.07);
 }
 
+
 .cert-top {
-  display: flex;
+    position: relative;
 
-  justify-content: space-between;
+    z-index: 2;
 
-  color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-  font-size: 9px;
+.cert-top span:first-child {
+    padding: 6px 10px;
 
-  font-weight: 800;
+    border-radius: 7px;
 
-  letter-spacing: 0.12em;
+    background: #f1f1ef;
+
+    color: #666666;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.cert-top span:last-child {
+    font-size: 10px;
+    font-weight: 700;
+
+    color: #b5b5b5;
+}
+
+
+.cert-content {
+    position: relative;
+    z-index: 2;
 }
 
 .cert-item h4 {
-  margin: 35px 0 15px;
+    margin: 25px 0 12px;
 
-  font-family: "Space Grotesk", sans-serif;
+    font-size: 21px;
+    line-height: 1.25;
 
-  font-size: 22px;
+    letter-spacing: -0.4px;
 
-  line-height: 1.15;
+    font-weight: 750;
+
+    color: #1c1c1c;
 }
 
 .cert-item p {
-  max-width: 420px;
+    max-width: 430px;
 
-  color: #8b949e;
+    margin: 0;
 
-  font-size: 11px;
+    font-size: 13px;
+    line-height: 1.7;
 
-  line-height: 1.8;
+    color: #777777;
 }
 
-.cert-link {
-  display: inline-block;
+@media (max-width: 700px) {
 
-  margin-top: 25px;
+    .experience-section {
+        padding: 90px 20px 100px;
+    }
 
-  color: #a78bfa;
+    .experience-header {
+        margin-bottom: 65px;
+    }
 
-  font-size: 10px;
+    .experience-header > span {
+        margin-bottom: 16px;
 
-  font-weight: 700;
+        padding: 6px 10px;
 
-  text-decoration: none;
+        font-size: 9px;
+    }
+
+    .experience-header h2 {
+        font-size: 34px;
+
+        line-height: 1.12;
+
+        letter-spacing: -1.3px;
+    }
+
+    .journey-row {
+        grid-template-columns: 42px 1fr;
+
+        gap: 20px;
+
+        padding-bottom: 50px;
+
+        margin-bottom: 50px;
+    }
+
+    .journey-number {
+        width: 38px;
+        height: 38px;
+
+        font-size: 10px;
+    }
+
+    .blue-number {
+        background: #f3f3f1;
+        color: #555555;
+    }
+
+    .journey-row.first .journey-number::after {
+        top: 38px;
+
+        height: 220px;
+    }
+
+    .journey-content {
+        padding-top: 1px;
+    }
+
+    .journey-type {
+        margin-bottom: 10px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+
+        color: #777777;
+    }
+
+    .journey-type.blue {
+        color: #777777;
+    }
+
+    .journey-content h3 {
+        font-size: 21px;
+
+        line-height: 1.3;
+
+        letter-spacing: -0.4px;
+    }
+
+    .journey-date {
+        margin-bottom: 15px;
+
+        font-size: 11px;
+    }
+
+    .journey-content > p:last-child {
+        font-size: 13px;
+
+        line-height: 1.75;
+    }
+
+    .journey-side {
+        display: none;
+    }
+
+    .cert-section {
+        margin-top: 75px;
+    }
+
+    .cert-heading {
+        display: block;
+
+        margin-bottom: 28px;
+    }
+
+    .cert-heading > span {
+        display: block;
+
+        margin-bottom: 13px;
+
+        font-size: 9px;
+    }
+
+    .cert-heading h3 {
+        font-size: 27px;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .cert-item {
+        min-height: 205px;
+
+        padding: 21px;
+
+        border-radius: 16px;
+    }
+
+    .cert-item h4 {
+        margin: 22px 0 10px;
+
+        font-size: 19px;
+    }
+
+    .cert-item p {
+        font-size: 12px;
+
+        line-height: 1.7;
+    }
 }
-
-.cert-link:hover {
-  color: #c4b5fd;
-}
-
-
-@media (max-width: 800px) {
-
-  .journey-row {
-    grid-template-columns:
-      40px 1fr;
-  }
-
-  .journey-side {
-    display: none;
-  }
-
-  .current-focus {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-  }
-
-}
-
-@media (max-width: 600px) {
-
-  .experience-section {
-    padding: 85px 0;
-  }
-
-  .experience-header {
-    margin-bottom: 55px;
-  }
-
-  .experience-header h2 {
-    font-size: 3rem;
-  }
-
-  .journey-row {
-    padding: 30px 0;
-
-    gap: 15px;
-  }
-
-  .journey-content h3 {
-    font-size: 21px;
-  }
-
-  .cert-section {
-    padding-top: 75px;
-  }
-
-  .cert-heading {
-    display: block;
-  }
-
-  .cert-heading h3 {
-    margin-top: 15px;
-  }
-
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .current-focus {
-    margin-top: 80px;
-  }
-
-}
-

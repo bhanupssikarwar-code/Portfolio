@@ -1,171 +1,218 @@
-
+import { motion } from "framer-motion";
+import { FiGithub } from "react-icons/fi";
 import "../Css/Project.css";
 
 function Projects() {
-  const projects = [
-    {
-      number: "01",
-      title: "DevBoard Portfolio",
-      category: "PORTFOLIO",
-      color: "purple",
-      description:
-        "A modern developer portfolio designed to showcase projects, technical skills and professional experience.",
-      tech: ["React", "JavaScript", "AWS S3", "Boto3"],
-      highlights: [
-        "Responsive React UI",
-        "AWS S3 deployment",
-        "Boto3 integration",
-      ],
-    },
 
-    {
-      number: "02",
-      title: "Organic Mart",
-      category: "E-COMMERCE",
-      color: "orange",
-      description:
-        "A responsive e-commerce application with product browsing, dynamic routes and cart functionality.",
-      tech: ["React", "JavaScript", "Bootstrap"],
-      highlights: [
-        "Product listing",
-        "Dynamic routing",
-        "Cart management",
-      ],
-    },
+    const projects = [
+        {
+            number: "01",
+            category: "WEB DEVELOPMENT",
+            title: "E-commerce Web Application",
+            description:
+                "A responsive e-commerce application built with React and JavaScript. I focused on creating a smooth shopping experience with reusable components, dynamic product rendering, state management and cart functionality. The project helped me understand how a real-world frontend application is structured and how different parts of an application communicate with each other.",
+            technologies: ["React", "JavaScript", "HTML", "CSS"],
+            theme: "blue"
+        },
 
-    {
-      number: "03",
-      title: "Advanced Student Database",
-      category: "DATABASE",
-      color: "blue",
-      description:
-        "A SQL-based database project focused on structured data management and advanced query operations.",
-      tech: ["SQL", "Oracle", "Database"],
-      highlights: [
-        "Complex queries",
-        "Data filtering",
-        "Relational operations",
-      ],
-    },
+        {
+            number: "02",
+            category: "API INTEGRATION",
+            title: "Weather Application",
+            description:
+                "A dynamic weather application that allows users to search for cities and view weather information. It integrates REST APIs to retrieve location and weather data while handling asynchronous requests, loading states, errors and dynamic UI updates.",
+            technologies: ["React", "JavaScript", "REST APIs"],
+            theme: "lavender"
+        },
 
-    {
-      number: "04",
-      title: "Hand Sign Detection",
-      category: "COMPUTER VISION",
-      color: "green",
-      description:
-        "A computer vision project that detects hand signs using Python and OpenCV.",
-      tech: ["Python", "OpenCV", "Computer Vision"],
-      highlights: [
-        "Image processing",
-        "Hand detection",
-        "Real-time recognition",
-      ],
-    },
-  ];
+        {
+            number: "03",
+            category: "COMPUTER VISION",
+            title: "Hand Sign Detection",
+            description:
+                "A computer vision project developed using Python and OpenCV to detect hand signs from visual input. The project provided practical experience with image processing, computer vision concepts and working with visual data.",
+            technologies: ["Python", "OpenCV"],
+            theme: "green"
+        },
 
-  return (
-    <section id="projects" className="projects-section">
+        {
+            number: "04",
+            category: "DATABASE & ANALYTICS",
+            title: "E-Commerce Sales Analytics",
+            description:
+                "An Oracle SQL database project created to analyze e-commerce sales and customer data. I designed relational tables with keys and constraints and used joins, subqueries, aggregate functions and analytical queries to extract meaningful information.",
+            technologies: ["Oracle SQL", "SQL", "Database Design"],
+            theme: "peach"
+        }
+    ];
 
-      <div className="projects-container">
-        <div className="projects-header">
-          <span>Projects</span>
+    return (
+        <section className="projects" id="projects">
 
-          <div className="projects-title-row">
-            <h2>
-              Built with
-              <span> purpose</span>
-            </h2>
+            <div className="projects-container">
 
-            <p>
-              A few projects that represent my approach to
-              development, problem solving and learning.
-            </p>
+                <motion.div
+                    className="projects-heading"
 
-          </div>
+                    initial={{
+                        opacity: 0,
+                        y: 30
+                    }}
 
-        </div>
+                    whileInView={{
+                        opacity: 1,
+                        y: 0
+                    }}
 
-        <div className="projects-list">
+                    viewport={{
+                        once: true
+                    }}
 
-          {projects.map((project) => (
+                    transition={{
+                        duration: 0.7
+                    }}
+                >
 
-            <article
-              key={project.number}
-              className={`project-item ${project.color}`}
-            >
-
-              <div className="project-index">
-                {project.number}
-              </div>
-
-              <div className="project-main">
-
-                <span className="project-category">
-                  {project.category}
-                </span>
-
-                <h3>
-                  {project.title}
-                </h3>
-
-                <p className="project-description">
-                  {project.description}
-                </p>
-
-                <div className="project-tech">
-
-                  {project.tech.map((tech) => (
-                    <span key={tech}>
-                      {tech}
+                    <span className="projects-label">
+                        SELECTED WORK
                     </span>
-                  ))}
+
+                    <h2>
+                        Projects I've built.
+                    </h2>
+
+                    <p>
+                        A collection of applications and experiments
+                        that represent what I've learned by building
+                        things myself.
+                    </p>
+
+                </motion.div>
+
+                <div className="project-stack">
+
+                    {projects.map((project, index) => (
+
+                        <div
+                            className="project-space"
+                            key={project.title}
+                        >
+
+                            <motion.article
+                                className={`project-panel ${project.theme}`}
+
+                                style={{
+                                    zIndex: index + 1
+                                }}
+
+                                initial={{
+                                    opacity: 0,
+                                    y: 80
+                                }}
+
+                                whileInView={{
+                                    opacity: 1,
+                                    y: 0
+                                }}
+
+                                viewport={{
+                                    once: true,
+                                    amount: 0.15
+                                }}
+
+                                transition={{
+                                    duration: 0.7,
+                                    ease: [0.22, 1, 0.36, 1]
+                                }}
+                            >
+
+                                <div className="project-panel-top">
+
+                                    <span>
+                                        {project.number}
+                                    </span>
+
+                                    <span>
+                                        {project.category}
+                                    </span>
+
+                                </div>
+
+                                <div className="project-panel-content">
+
+                                    <h3>
+                                        {project.title}
+                                    </h3>
+
+                                    <p>
+                                        {project.description}
+                                    </p>
+
+                                </div>
+
+                                <div className="project-panel-bottom">
+
+                                    {project.technologies.map(
+                                        (technology) => (
+                                            <span key={technology}>
+                                                {technology}
+                                            </span>
+                                        )
+                                    )}
+
+                                </div>
+
+                            </motion.article>
+
+                        </div>
+
+                    ))}
 
                 </div>
 
-              </div>
+                <motion.div
+                    className="projects-github"
 
-              <div className="project-details">
+                    initial={{
+                        opacity: 0,
+                        y: 20
+                    }}
 
-                <span className="details-label">
-                  HIGHLIGHTS
-                </span>
+                    whileInView={{
+                        opacity: 1,
+                        y: 0
+                    }}
 
-                <ul>
+                    viewport={{
+                        once: true
+                    }}
 
-                  {project.highlights.map((item) => (
-                    <li key={item}>
-                      {item}
-                    </li>
-                  ))}
+                    transition={{
+                        duration: 0.6
+                    }}
+                >
 
-                </ul>
+                    <p>
+                        Want to see more?
+                    </p>
 
-              </div>
+                    <a
+                        href="https://github.com/bhanupssikarwar-code"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FiGithub />
+                        <span>
+                            Visit my GitHub
+                        </span>
+                    </a>
 
-            </article>
+                </motion.div>
 
-          ))}
+            </div>
 
-        </div>
-
-        <div className="projects-footer">
-
-          <span>
-            WANT TO SEE MORE?
-          </span>
-
-          <a href="https://github.com/bhanupssikarwar-code">
-            Explore GitHub →
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-  );
+        </section>
+    );
 }
 
 export default Projects;
-

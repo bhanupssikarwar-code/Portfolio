@@ -1,181 +1,265 @@
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+import {
+  FiCloud,
+    FiCopy,
+    FiGithub,
+    FiLinkedin,
+    FiMail,
+    FiMapPin,
+    FiSun
+} from "react-icons/fi";
+
+import Mylogo from "../assets/images/Mylogo.png";
 
 import "../Css/Contact.css";
 
-import {
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaGithub,
-  FaLinkedin,
-  FaArrowUp,
-} from "react-icons/fa";
-
 function Contact() {
-  return (
-    <section id="contact" className="contact">
 
-      <div className="contact-container">
+    const [temperature, setTemperature] = useState(null);
 
-        <div className="contact-header">
+    useEffect(() => {
 
-          <div>
-            <span className="contact-kicker">
-              CONTACT
-            </span>
+        async function getWeather() {
 
-            <h2>
-              Let's <span>talk</span>
-              </h2>
-          </div>
+            try {
 
-          <div className="available-badge">
-            Available for opportunities
-          </div>
+                const response = await fetch(
+                    "https://api.open-meteo.com/v1/forecast?latitude=12.9716&longitude=77.5946&current=temperature_2m&temperature_unit=celsius&timezone=Asia%2FKolkata"
+                );
 
-        </div>
+                const data = await response.json();
 
-        <div className="contact-grid">
+                setTemperature(
+                    Math.round(data.current.temperature_2m)
+                );
 
-          <div className="contact-intro">
+            } catch (error) {
 
-            <p className="intro-label">
-              HAVE SOMETHING IN MIND?
-            </p>
+                console.log(
+                    "Weather error:",
+                    error
+                );
 
-            <p className="intro-text">
-              Whether it's a job opportunity, internship,
-              collaboration or an interesting project,
-              I'm always open to a conversation.
-            </p>
+            }
+        }
 
-            <a
-              href="mailto:bhanu.p.ssikarwar01@gmail.com"
-              className="email-link"
-            >
-              <span>
-                bhanu.p.ssikarwar01@gmail.com
-              </span>
-            </a>
+        getWeather();
 
-          </div>
+        const interval = setInterval(
+            getWeather,
+            10 * 60 * 1000
+        );
 
-          <div className="contact-details">
-            <a
-              href="mailto:bhanu.p.ssikarwar01@gmail.com"
-              className="detail-card"
-            >
+        return () => clearInterval(interval);
 
-              <div className="detail-icon">
-                <FaEnvelope />
-              </div>
+    }, []);
 
-              <div>
-                <span>EMAIL</span>
-                <p>Let's connect</p>
-              </div>
 
-              <b>↗</b>
+    function copyEmail() {
 
-            </a>
+        navigator.clipboard.writeText(
+            "your-email@gmail.com"
+        );
 
-            <a
-              href="tel:+919109216850"
-              className="detail-card"
-            >
+    }
 
-              <div className="detail-icon">
-                <FaPhone />
-              </div>
 
-              <div>
-                <span>PHONE</span>
-                <p>+91 9109216850</p>
-              </div>
+    return (
+        <section
+            className="contact"
+            id="contact"
+        >
 
-              <b>↗</b>
+            <div className="contact-container">
 
-            </a>
+                <motion.div
+                    className="contact-main"
 
-            <div className="detail-card">
+                    initial={{
+                        opacity: 0,
+                        y: 25
+                    }}
 
-              <div className="detail-icon">
-                <FaMapMarkerAlt />
-              </div>
+                    whileInView={{
+                        opacity: 1,
+                        y: 0
+                    }}
 
-              <div>
-                <span>BASED IN</span>
-                <p>Bengaluru, India</p>
-              </div>
+                    viewport={{
+                        once: true
+                    }}
 
-              <small>IND</small>
+                    transition={{
+                        duration: 0.7
+                    }}
+                >
 
-            </div>
+                    <span className="contact-label">
+                        GET IN TOUCH
+                    </span>
 
-          </div>
+                    <h2>
+                        Let's build something
+                        <br />
+                        <strong>
+                            meaningful together.
+                        </strong>
+                    </h2>
 
-        </div>
+                    <p className="contact-description">
+                        I'm always open to discussing new opportunities,
+                        interesting projects, collaborations or simply
+                        having a conversation about technology.
+                    </p>
 
-        <div className="contact-bottom">
+                    <button
+                        className="email-button"
+                        onClick={copyEmail}
+                    >
 
-          <div className="social-area">
+                        <span>
+                            Email ID: bhanu.p.ssikarwar01@gmail.com
+                        </span>
 
-            <span>ELSEWHERE</span>
+                    </button>
 
-            <div className="social-links">
-
-              <a
-                href="https://github.com/bhanupssikarwar-code"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaGithub />
-                GitHub
-                <b>↗</b>
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/bhanu-pratap-singh-sikarwar-783044319/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaLinkedin />
-                LinkedIn
-                <b>↗</b>
-              </a>
+                </motion.div>
 
             </div>
 
-          </div>
+            <footer className="portfolio-footer">
+
+                <div className="footer-container">
+
+                    <div className="footer-profile">
+
+                        <a
+                            href="#home"
+                            className="footer-logo"
+                        >
+                            <img
+                                src={Mylogo}
+                                alt="Bhanu Pratap Singh Sikarwar"
+                            />
+                        </a>
+
+                        <h3>
+                            Bhanu Pratap Singh Sikarwar
+                        </h3>
+
+                        <p>
+                            Fullstack Developer
+                        </p>
+
+                    </div>
+
+                    <div className="footer-socials">
+
+                        <a
+                            href="mailto:bhanu.p.ssikarwar01@gmail.com"
+                            aria-label="Email"
+                            title="Email"
+                        >
+                            <FiMail />
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/bhanu-pratap-singh-sikarwar-783044319"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="LinkedIn"
+                            title="LinkedIn"
+                        >
+                            <FiLinkedin />
+                        </a>
+
+                        <a
+                            href="https://github.com/bhanupssikarwar-code"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="GitHub"
+                            title="GitHub"
+                        >
+                            <FiGithub />
+                        </a>
+
+                    </div>
 
 
-          <a href="#home" className="back-top">
+                    <div className="footer-info">
 
-            <span>BACK TO TOP</span>
+                        <div className="footer-location">
 
-            <i>
-              <FaArrowUp />
-            </i>
+                            <FiMapPin />
 
-          </a>
+                            <span>
+                                Built with care in Bengaluru, India
+                            </span>
 
-        </div>
-        <div className="contact-footer">
+                        </div>
 
-          <span>
-            Designed & built with React
-          </span>
 
-          <span>
-            © 2026 Bhanu Pratap Singh Sikarwar
-          </span>
+                        <div className="footer-weather">
 
-        </div>
+                            <FiCloud />
 
-      </div>
+                            <span>
+                                {temperature !== null
+                                    ? `${temperature}°C`
+                                    : "Loading..."}
+                            </span>
 
-    </section>
-  );
+                        </div>
+
+                    </div>
+
+                    <div className="footer-bottom">
+
+                        <span>
+                            © 2024 Bhanu Pratap Singh Sikarwar
+                        </span>
+
+                        <div className="footer-nav">
+
+                            <a href="#about">
+                                About
+                            </a>
+
+                            <a href="#skills">
+                                Skills
+                            </a>
+
+                            <a href="#experience">
+                                Experience
+                            </a>
+
+                            <a href="#projects">
+                                Projects
+                            </a>
+
+                            <a href="#contact">
+                                Contact
+                            </a>
+
+                        </div>
+
+                        <a
+                            href="#home"
+                            className="back-top"
+                        >
+                            Back to top ↑
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </footer>
+
+        </section>
+    );
 }
 
 export default Contact;
-

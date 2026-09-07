@@ -1,97 +1,131 @@
+import { motion } from "framer-motion";
 import "../Css/Skills.css";
 
 function Skills() {
-  const skills = [
-    { name: "React.js", short: "REACT", color: "purple" },
-    { name: "JavaScript", short: "JS", color: "yellow" },
-    { name: "Python", short: "PY", color: "blue" },
-    { name: "Django", short: "DJ", color: "green" },
-    { name: "REST APIs", short: "API", color: "orange" },
-    { name: "SQL", short: "SQL", color: "pink" },
-    { name: "AWS", short: "AWS", color: "cyan" },
-    { name: "Git & GitHub", short: "GIT", color: "red" },
-  ];
 
-  return (
-    <section id="skills" className="skills-section">
+    const skillGroups = [
+        {
+            title: "Frontend",
+            skills: ["React", "JavaScript", "HTML", "CSS"]
+        },
+        {
+            title: "Backend & APIs",
+            skills: ["Python", "REST APIs"]
+        },
+        {
+            title: "Database",
+            skills: ["SQL", "Oracle SQL"]
+        },
+        {
+            title: "Cloud & Tools",
+            skills: ["AWS", "Git", "GitHub"]
+        }
+    ];
 
-      <div className="skills-container">
-        <div className="skills-intro">
+    return (
+        <section className="skills" id="skills">
 
-          <span className="skills-eyebrow">
-            MY TOOLKIT
-          </span>
+            <div className="skills-container">
 
-          <h2>
-            I speak
-            <br />
-            <span>code</span>
-          </h2>
+                <motion.div
+                    className="skills-heading"
+                    initial={{
+                        opacity: 0,
+                        y: 20
+                    }}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0
+                    }}
+                    viewport={{
+                        once: true
+                    }}
+                    transition={{
+                        duration: 0.6
+                    }}
+                >
 
-          <p>
-            The technologies and tools I use to transform ideas
-            into functional, scalable and engaging applications.
-          </p>
+                    <p className="skills-label">
+                        SKILLS
+                    </p>
 
-          <div className="skills-counter">
-            <strong>08</strong>
-            <span>CORE<br />TECHNOLOGIES</span>
-          </div>
+                    <h2>
+                        Technologies I use.
+                    </h2>
 
-          <div className="skills-caption">
-            Always exploring something new
-          </div>
+                    <p className="skills-description">
+                        A collection of technologies and tools
+                        I've been using throughout my development
+                        journey.
+                    </p>
 
-        </div>
-        <div className="skills-showcase">
-          <div className="skills-orbit">
+                </motion.div>
 
-            {skills.map((skill, index) => (
-              <div
-                key={skill.name}
-                className={`tech-item ${skill.color} tech-${index + 1}`}
-              >
-                <div className="tech-symbol">
-                  {skill.short}
+                <div className="skills-grid">
+
+                    {skillGroups.map((group, index) => (
+
+                        <motion.div
+                            className={`skill-card card-${index + 1}`}
+                            key={group.title}
+
+                            initial={{
+                                opacity: 0,
+                                y: 25
+                            }}
+
+                            whileInView={{
+                                opacity: 1,
+                                y: 0
+                            }}
+
+                            viewport={{
+                                once: true
+                            }}
+
+                            transition={{
+                                duration: 0.5,
+                                delay: index * 0.1
+                            }}
+
+                            whileHover={{
+                                y: -5
+                            }}
+                        >
+
+                            <div className="skill-card-top">
+                                <span className="skill-title">
+                                    {group.title}
+                                </span>
+
+                            </div>
+
+
+                            <div className="skill-tags">
+
+                                {group.skills.map((skill) => (
+
+                                    <span
+                                        className="skill-tag"
+                                        key={skill}
+                                    >
+                                        {skill}
+                                    </span>
+
+                                ))}
+
+                            </div>
+
+                        </motion.div>
+
+                    ))}
+
                 </div>
 
-                <div className="tech-name">
-                  {skill.name}
-                </div>
-              </div>
-            ))}
-
-            <div className="orbit-center">
-              <span>&lt;/&gt;</span>
-              <small>FULL<br />STACK</small>
             </div>
 
-          </div>
-
-        </div>
-
-      </div>
-      <div className="skills-tools">
-
-        <div className="tool-title">
-          <span>ALSO WORKING WITH</span>
-        </div>
-
-        <div className="tool-list">
-
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>Bootstrap</span>
-          <span>Vite</span>
-          <span>Docker</span>
-          <span>VS Code</span>
-
-        </div>
-
-      </div>
-
-    </section>
-  );
+        </section>
+    );
 }
 
 export default Skills;
