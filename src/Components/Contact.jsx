@@ -3,12 +3,10 @@ import { motion } from "framer-motion";
 
 import {
   FiCloud,
-    FiCopy,
     FiGithub,
     FiLinkedin,
     FiMail,
     FiMapPin,
-    FiSun
 } from "react-icons/fi";
 
 import Mylogo from "../assets/images/Mylogo.png";

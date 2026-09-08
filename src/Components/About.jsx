@@ -34,7 +34,7 @@ function About() {
                     </h2>
 
                     <p className="about-introduction">
-                        I'm <strong>Bhanu</strong>, a Computer Science
+                        I'm <strong>Bhanu</strong>, a Computer Science & Engineering
                         graduate from India who genuinely enjoys
                         building things with code — products that
                         solve problems, make things easier, and turn

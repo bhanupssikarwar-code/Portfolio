@@ -16,6 +16,21 @@
     pointer-events: none;
     z-index: 0;
 }
+
+.circle-one {
+    width: 500px;
+    height: 500px;
+    top: -220px;
+    left: -180px;
+}
+
+.circle-two {
+    width: 450px;
+    height: 450px;
+    bottom: -230px;
+    right: -180px;
+}
+
 .hero-content {
     position: relative;
     z-index: 5;
@@ -45,7 +60,10 @@
     border: 6px solid white;
     box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.10);
-    transition: 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .profile-image img {
@@ -58,9 +76,8 @@
 .profile-image:hover {
     box-shadow:
         0 20px 45px rgba(83, 83, 83, 0.18);
-    border-color:#b39163;
+    border-color: #b39163;
     transform: scale(1.02);
-    transition: 0.3s ease;
 }
 
 .hello-message {
@@ -68,11 +85,11 @@
     top: 10px;
     right: 0;
     padding: 10px 17px;
-     background: linear-gradient(
+    background: linear-gradient(
         90deg,
         #e18d60,
         #b39163
-    ); 
+    );
     color: white;
     border-radius: 17px;
     font-size: 13px;
@@ -151,9 +168,7 @@
 .animated-word {
     display: inline-block;
     font-weight: 700;
-    background:black;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #111111;
 }
 
 .hero-description {
@@ -166,7 +181,7 @@
 
 .description-highlight {
     font-weight: 700;
-    color:black
+    color: #111111;
 }
 
 .hero-buttons {
@@ -235,7 +250,7 @@
     }
 
     .hero-content {
-        gap: 45px;
+        gap: 35px;
     }
 
     .profile-wrapper {
@@ -284,6 +299,13 @@
         height: 220px;
         border-radius: 42px;
         border-width: 5px;
+    }
+
+    .profile-image:hover {
+        box-shadow:
+            0 20px 45px rgba(83, 83, 83, 0.18);
+        border-color: #b39163;
+        transform: scale(1.02);
     }
 
     .hello-message {
@@ -343,8 +365,27 @@
         font-size: 14px;
     }
 
+    .scroll-indicator {
+        bottom: 12px;
+        font-size: 9px;
+    }
+
     .scroll-indicator svg {
-        font-size: 20px;
-        color:green
+        font-size: 14px;
+        color: #888888;
+    }
+
+    .circle-one {
+        width: 280px;
+        height: 280px;
+        top: -150px;
+        left: -160px;
+    }
+
+    .circle-two {
+        width: 280px;
+        height: 280px;
+        bottom: -160px;
+        right: -160px;
     }
 }
