@@ -94,13 +94,21 @@
     box-shadow:
         0 20px 45px rgba(0, 0, 0, 0.30);
 }
-
 .project-panel.blue,
 .project-panel.lavender,
 .project-panel.green,
 .project-panel.peach {
     background:white;
     color: #151515;
+}
+.project-panel.blue:hover,
+.project-panel.lavender:hover,
+.project-panel.green:hover,
+.project-panel.peach:hover{
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.50);
+    transform: translateY(-6px);
+    transition: 0.2s ease;
 }
 
 .project-panel-top {
@@ -163,7 +171,7 @@
 
     line-height: 1.8;
 
-    color: #666666;
+    color: #a19191;
 }
 
 .project-panel-bottom {
@@ -204,6 +212,7 @@
     border-color: #151515;
 
     transform: translateY(-2px);
+    transition: 0.9s ease;
 }
 
 

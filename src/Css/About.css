@@ -101,9 +101,9 @@
 
     line-height: 1.9;
 
-    color: #555555;
+    color: #898181;
 
-    font-weight: 400;
+    font-weight: 300;
 }
 
 
@@ -168,6 +168,8 @@
     color: #ffffff;
 
     border-color: #111111;
+    transform:translateY(-2px);
+    transition: 0.9s ease;
 }
 
 .story .final-quote {

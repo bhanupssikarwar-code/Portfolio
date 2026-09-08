@@ -148,6 +148,10 @@ function Experience() {
                             B.Tech — Computer Science & Engineering
                         </h3>
 
+                        <p className="journey-college">
+                            Institute of Engineering & Science, IPS Academy, Indore
+                        </p>
+
                         <p className="journey-date">
                             2021 — 2025
                         </p>

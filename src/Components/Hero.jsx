@@ -93,14 +93,14 @@ function Hero() {
                     <motion.div
                         className="profile-image"
 
-                        whileHover={{
-                            scale: 1.03,
-                            x: -6
-                        }}
+                         whileHover={{
+                           scale: 1.03,
+                        y: -6
+                         }}
 
                         whileTap={{
-                            scale: 0.98
-                        }}
+                             scale: 0.98
+                         }}
                     >
 
                         <img

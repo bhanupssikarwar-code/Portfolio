@@ -124,6 +124,10 @@ function Projects() {
                                     duration: 0.7,
                                     ease: [0.22, 1, 0.36, 1]
                                 }}
+                                whileHover={{
+                                    scale: 1.03,
+                                    y: -6
+                                }}
                             >
 
                                 <div className="project-panel-top">

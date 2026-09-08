@@ -16,21 +16,6 @@
     pointer-events: none;
     z-index: 0;
 }
-
-.circle-one {
-    width: 500px;
-    height: 500px;
-    top: -220px;
-    left: -180px;
-}
-
-.circle-two {
-    width: 450px;
-    height: 450px;
-    bottom: -230px;
-    right: -180px;
-}
-
 .hero-content {
     position: relative;
     z-index: 5;
@@ -73,7 +58,9 @@
 .profile-image:hover {
     box-shadow:
         0 20px 45px rgba(83, 83, 83, 0.18);
-    border-color: honeydew;
+    border-color:#b39163;
+    transform: scale(1.02);
+    transition: 0.3s ease;
 }
 
 .hello-message {
