@@ -233,7 +233,7 @@ function Hero() {
                         </span>{" "}
 
                         passionate about building modern,
-                        responsive and user-friendly web
+                        responsive and user-friendly
                         applications.
 
                     </motion.p>
