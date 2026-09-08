@@ -12,11 +12,13 @@ import "../Css/Hero.css";
 function AnimatedText() {
 
     const texts = [
-        "build.",
-        "code.",
-        "create.",
-        "design.",
-        "learn."
+        "Build Products.",
+        "Write Code.",
+        "Create.",
+        "Design.",
+        "Learn.",
+        "Tackle Challenges"
+
     ];
 
     const [index, setIndex] = useState(0);
@@ -50,7 +52,7 @@ function AnimatedText() {
                 }}
                 animate={{
                     opacity: 1,
-                    y: 0
+                    y:0
                 }}
                 transition={{
                     duration: 0.5
