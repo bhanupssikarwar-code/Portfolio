@@ -78,7 +78,7 @@ function About() {
                         development and gradually found myself enjoying
                         <strong> web development </strong>
                         the most. I started with HTML and CSS, moved
-                        into JavaScript, and eventually discovered React.
+                        into JavaScript, and eventually discovered React and Node.js.
                     </p>
 
 
@@ -132,15 +132,18 @@ function About() {
                         happens behind the interface.
                     </p>
 
-
                     <p>
                         With Python, I worked on projects such as
-                        <strong> Hand Sign Detection using OpenCV</strong>.
+                        <strong>Hand Sign Detection using OpenCV</strong>.
                         With SQL, I worked on an
-                        <strong> E-Commerce Sales Analytics Database
-                        using Oracle SQL</strong>, where I practiced
+                        <strong>E-Commerce Sales Analytics Database
+                            using Oracle SQL</strong>, where I practiced
                         database design, relationships, joins,
                         subqueries and analytical queries.
+                        I also developed an
+                        <strong> Application Management System using Node.js and Express.js</strong>,
+                        where I worked with REST APIs, CRUD operations,
+                        authentication and database integration.
                     </p>
 
 
@@ -161,6 +164,10 @@ function About() {
 
                         <span>React</span>
 
+                        <span>Node.js</span>
+
+                        <span>Express.js</span>
+
                         <span>JavaScript</span>
 
                         <span>Python</span>
@@ -168,6 +175,8 @@ function About() {
                         <span>SQL</span>
 
                         <span>AWS</span>
+
+                        <span>Rest Api</span>
 
                         <span>Git & GitHub</span>
 
@@ -204,7 +213,7 @@ function About() {
                     <p>
                         I want to understand
                         <strong> why something is being built,
-                        who it helps, and how it can be made better.</strong>
+                            who it helps, and how it can be made better.</strong>
                     </p>
 
 

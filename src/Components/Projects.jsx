@@ -12,7 +12,7 @@ function Projects() {
             description:
                 "A responsive e-commerce application built with React and JavaScript. I focused on creating a smooth shopping experience with reusable components, dynamic product rendering, state management and cart functionality. The project helped me understand how a real-world frontend application is structured and how different parts of an application communicate with each other.",
             technologies: ["React", "JavaScript", "HTML", "CSS"],
-            theme: "blue"
+            
         },
 
         {
@@ -22,7 +22,7 @@ function Projects() {
             description:
                 "A dynamic weather application that allows users to search for cities and view weather information. It integrates REST APIs to retrieve location and weather data while handling asynchronous requests, loading states, errors and dynamic UI updates.",
             technologies: ["React", "JavaScript", "REST APIs"],
-            theme: "lavender"
+            
         },
 
         {
@@ -32,7 +32,7 @@ function Projects() {
             description:
                 "A computer vision project developed using Python and OpenCV to detect hand signs from visual input. The project provided practical experience with image processing, computer vision concepts and working with visual data.",
             technologies: ["Python", "OpenCV"],
-            theme: "green"
+            
         },
 
         {
@@ -42,8 +42,18 @@ function Projects() {
             description:
                 "An Oracle SQL database project created to analyze e-commerce sales and customer data. I designed relational tables with keys and constraints and used joins, subqueries, aggregate functions and analytical queries to extract meaningful information.",
             technologies: ["Oracle SQL", "SQL", "Database Design"],
-            theme: "peach"
+           
+        },
+        {
+            number: "05",
+            category: "BACKEND DEVELOPMENT",
+            title: "Application Management System",
+            description:
+                "A full-stack application management system built using Node.js and Express.js. I developed REST APIs to manage application data and implemented CRUD operations, authentication, and database integration.",
+            technologies: ["Node.js", "Express.js", "REST API", "Oracle SQL"],
         }
+
+
     ];
 
     return (

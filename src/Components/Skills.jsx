@@ -10,7 +10,7 @@ function Skills() {
         },
         {
             title: "Backend & APIs",
-            skills: ["Python", "REST APIs"]
+            skills: ["Python","Node.js","Express.js", "REST APIs"]
         },
         {
             title: "Database",
